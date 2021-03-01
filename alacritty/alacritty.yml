@@ -22,17 +22,17 @@ scrolling:
   history: 10000
 font:
   normal:
-    family: Office Code Pro
-    style: Light
+    family: Office Code Pro 
+    style: Regular
   bold:
-    family: Office Code Pro
-    style: Inconsolata
+    family: Office Code Pro 
+    style: Regular
   italic:
-    family: Office Code Pro
-    style: Inconsolata
-  size: 16
+    family: Office Code Pro 
+    style: Regular
+  size: 13
   offset:
-    x: 2
+    x: 1
     y: 0
   glyph_offset:
     x: 0
@@ -44,7 +44,7 @@ selection:
 dynamic_title: true
 cursor:
   style: Block
-  unfocused_hollow: true
+  unfocused_hollow: false
 live_config_reload: true
 shell:
   program: /usr/bin/tmux
@@ -58,7 +58,7 @@ debug:
   persistent_logging: false
   log_level: Error
   print_events: false
-  ref_test: false
+  ref_test: true
 mouse:
   hide_when_typing: true
   url:
