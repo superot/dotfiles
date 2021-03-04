@@ -1,46 +1,39 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-" _telescope_
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
-" _coc_
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
-" _vim_sensible_
 Plug 'https://github.com/tpope/vim-sensible' 
-" _vim_dispatch_
 Plug 'https://github.com/tpope/vim-dispatch' 
 Plug 'https://github.com/tpope/vim-sleuth'
 Plug 'https://github.com/tpope/vim-unimpaired'
-" _vim_markdown_
 Plug 'https://github.com/tpope/vim-markdown'
-" _vim_fugitive_
 Plug 'https://github.com/tpope/vim-fugitive' 
-" _colorscheme_
 Plug 'gruvbox-community/gruvbox'
 Plug 'https://github.com/rakr/vim-one'
+Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'https://github.com/itchyny/lightline.vim'
-" _indentline_
+Plug 'https://github.com/sainnhe/sonokai'
 Plug 'https://github.com/Yggdroot/indentLine'
-" _python_
 Plug 'https://github.com/jmcantrell/vim-virtualenv'
 if has('nvim')
     Plug 'https://github.com/numirias/semshi', {'do': ':UpdateRemotePlugins'}
 endif
-" _supertab_
 Plug 'https://github.com/ervandew/supertab'
-" _simpyfold_
 Plug 'https://github.com/tmhedberg/SimpylFold'
-" _auto_pairs_
 Plug 'https://github.com/jiangmiao/auto-pairs'
-" _fzf_ <3
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" _syntax_
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/vim-python/python-syntax'
 Plug 'https://github.com/PProvost/vim-ps1'
 Plug 'https://github.com/StanAngeloff/php.vim'
-Plug 'https://github.com/arzg/vim-sh'
+Plug 'https://github.com/arzg/vim-sh', { 'for': 'go'  }
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
@@ -51,12 +44,8 @@ filetype plugin indent on
 syntax enable
 syntax on
 
-set ttyfast
-set t_Co=256
-if (has("termguicolors"))
-    set termguicolors
-endif
 set termguicolors
+set t_Co=256
 set nowrap
 set noswapfile
 set noshowmode
@@ -157,17 +146,17 @@ endif
 nnoremap <leader>ff <cmd>Files<cr>
 nnoremap <leader>fg <cmd><cr>
 nnoremap <leader><space>f <cmd>:CocCommand explorer<CR>
-nnoremap <Leader>rp :w<Bar>execute 'silent !tmux send-keys -t 2 "python %" Enter'<CR><bar>redraw<CR>
-nnoremap <Leader>]r :w<Bar>execute 'silent !tmux send-keys -t right "python %" Enter'<CR><bar>redraw<CR>
+nnoremap <Leader>rp :w<Bar>execute 'silent !tmux send-keys -t 2 "python %" Enter'<CR>>
+nnoremap <Leader>]r :w<Bar>execute 'silent !tmux send-keys -t right "python %" Enter'<CR>
 nnoremap <Leader>r] :w<CR> :CocCommand python.execInTerminal<CR>
 
 " _indentline_
 let g:indentLine_color_gui = '#444144'
-let g:indentLine_char = '∫'
+let g:indentLine_char = '+'
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 1
 let g:indentLine_enabled = 1
-let g:indentLine_leadingSpaceChar = '−'
+let g:indentLine_leadingSpaceChar = '-'
 let g:indentLine_leadingSpaceEnabled = 1
 
 " _simpyfold_

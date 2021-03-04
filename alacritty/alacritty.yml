@@ -11,10 +11,10 @@ window:
   padding:
     x: 0
     y: 0
-  title: xterm-256color
+  title: alacritty
   class:
-    instance: xterm-256color
-    general: xterm-256color
+    instance: st-256color
+    general: st-256color
   gtk_theme_variant: dark
   dynamic_padding: true
   decorations: none
@@ -22,17 +22,17 @@ scrolling:
   history: 10000
 font:
   normal:
-    family: Office Code Pro 
+    family: Consolas 
     style: Regular
   bold:
-    family: Office Code Pro 
-    style: Regular
+    family: Consolas 
+    style: Bold
   italic:
-    family: Office Code Pro 
+    family: Consolas 
     style: Regular
-  size: 13
+  size: 14
   offset:
-    x: 1
+    x: 0
     y: 0
   glyph_offset:
     x: 0
