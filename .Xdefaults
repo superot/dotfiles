@@ -1,0 +1,91 @@
+!#####################################
+! Github: https://github.com/superot #
+! Name: Bahadir ATASOY               #
+! Project: URxvt .xDefaults config   #
+!#####################################
+
+!--- FONT ---
+Xft*dpi:                    96
+Xft*antialias:              1
+Xft*rgba:                   rgb
+Xft*hinting:                1
+Xft*hintstyle:              hintfull
+Xft*autohint:               1
+Xft*lcdfilter:              lcddefault
+
+!--- GLOBAL ---
+Rxvt*font:                  xft:Consolas:pixelsize=16:autohint=true:antialias=true
+Rxvt*skipBuiltinGlyphs:     false
+Rxvt*allow_bold:            false
+Rxvt*termName:				rxvt-unicode
+Rxvt*urgentOnBell:          false
+Rxvt*visualBell:            false
+Rxvt*loginShell:			true
+Rxvt*saveLines:			    10000
+Rxvt*scrollWithBuffer:		true
+Rxvt*skipScroll:			true
+Rxvt*scrollBar:			    false
+Rxvt*scrollTtyOutput:		false
+Rxvt*scrollTtyKeypress:	    true
+Rxvt*secondaryScreen:		1
+Rxvt*secondaryScroll:		0
+Rxvt*secondaryWheel:		1
+Rxvt*inputMethod:			ibus
+Rxvt*preeditType:			OverTheSpot
+Rxvt*imLocale:				en_US.UTF-8
+Rxvt*geometry:				80x24
+Rxvt*borderLess:			false
+Rxvt*externalBorder:		0
+Rxvt*internalBorder:		0
+Rxvt*intensityStyles:		false
+Rxvt*cursorBlink:			true
+Rxvt*cursorUnderline:       false
+Rxvt*pointerBlank:          true
+Rxvt*depth:				    100
+Rxvt*transparent:			false
+Rxvt*shading:				100
+Rxvt*perl-ext-common:		default,resize-font,selection-to-clipboard,font-size,matcher,\
+                            xft,styles,combining,blink,iso14755,unicode3
+Rxvt*keysym.C-plus:		    font-size:increase
+Rxvt*keysym.C-minus:		font-size:decrease
+Rxvt*keysym.C-S-Up:         font-size:incglobal
+Rxvt*keysym.C-S-Down:       font-size:decglobal
+Rxvt*keysym.C-equal:        font-size:reset
+Rxvt*keysym.C-slash:        font-size:show
+Rxvt*keysym.Home:			\033[1~
+Rxvt*keysym.End:			\033[4~
+Rxvt*keysym.M-Down:		    \033[1;3B
+Rxvt*keysym.M-Up:			\033[1;3A
+Rxvt*keysym.M-Left:		    \033[1;3D
+Rxvt*keysym.M-Right:		\033[1;3C
+Rxvt*keysym.Control-Up:	    \033[1;5A
+Rxvt*keysym.Control-Down:	\033[1;5B
+Rxvt*keysym.Control-Left:	\033[1;5D
+Rxvt*keysym.Control-Right:	\033[1;5C
+Rxvt*iso14755:				false
+Rxvt*iso14755_52:			false
+Rxvt*buffered:				false
+
+!--- COLOR ---
+Rxvt*cursorColor:           #f1f1f1
+Rxvt*background:		    #101010
+Rxvt*foreground:			#f1f1f1
+Rxvt*colorIT:				#87af5f
+Rxvt*colorBD:				#d7d7d7
+Rxvt*colorUL:				#87afd7
+Rxvt.color0:                #000000
+Rxvt.color1:                #A80000
+Rxvt.color2:                #00A800
+Rxvt.color3:                #A8A800
+Rxvt.color4:                #0000A8
+Rxvt.color5:                #A800A8
+Rxvt.color6:                #00A8A8
+Rxvt.color7:                #A8A8A8
+Rxvt.color8:                #000054
+Rxvt.color9:                #FF0054
+Rxvt.color10:               #00FF54
+Rxvt.color11:               #FFFF54
+Rxvt.color12:               #0000FF
+Rxvt.color13:               #FF00FF
+Rxvt.color14:               #00FFFF
+Rxvt.color15:               #FFFFFF
