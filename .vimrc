@@ -2,39 +2,43 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'https://github.com/nvim-lua/popup.nvim'
+Plug 'https://github.com/nvim-lua/plenary.nvim'
+Plug 'https://github.com/norcalli/nvim-colorizer.lua'
+Plug 'https://github.com/nvim-telescope/telescope.nvim'
+
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'https://github.com/tpope/vim-sensible' 
 Plug 'https://github.com/tpope/vim-dispatch' 
 Plug 'https://github.com/tpope/vim-sleuth'
 Plug 'https://github.com/tpope/vim-unimpaired'
 Plug 'https://github.com/tpope/vim-markdown'
 Plug 'https://github.com/tpope/vim-fugitive' 
-Plug 'gruvbox-community/gruvbox'
+
+Plug 'https://github.com/sainnhe/sonokai'
 Plug 'https://github.com/rakr/vim-one'
 Plug 'https://github.com/joshdick/onedark.vim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'https://github.com/sonph/onehalf', { 'rtp': 'vim' }
 Plug 'https://github.com/itchyny/lightline.vim'
-Plug 'https://github.com/sainnhe/sonokai'
+
 Plug 'https://github.com/Yggdroot/indentLine'
 Plug 'https://github.com/jmcantrell/vim-virtualenv'
-if has('nvim')
-    Plug 'https://github.com/numirias/semshi', {'do': ':UpdateRemotePlugins'}
-endif
 Plug 'https://github.com/ervandew/supertab'
 Plug 'https://github.com/tmhedberg/SimpylFold'
+
 Plug 'https://github.com/jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf.vim'
+
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/vim-python/python-syntax'
 Plug 'https://github.com/PProvost/vim-ps1'
 Plug 'https://github.com/StanAngeloff/php.vim'
 Plug 'https://github.com/arzg/vim-sh', { 'for': 'go'  }
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'https://github.com/numirias/semshi'
 
 
 call plug#end()
@@ -44,6 +48,8 @@ filetype plugin indent on
 syntax enable
 syntax on
 
+set encoding=utf-8
+set fillchars+=stl:\ ,stlnc:\
 set termguicolors
 set t_Co=256
 set nowrap
@@ -97,7 +103,7 @@ endif
 let g:mapleader = "\\"
 
 " _colorscheme_
-source $HOME/.vim/custom/themes.vim
+source $HOME/.vim/colors/themes.vim
 
 " _vim_fugitive_
 nmap <leader>]h :diffget //3<CR>
@@ -142,22 +148,24 @@ if exists(':CocEnable')
     autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 endif
 
-" KEYBOARD MAPS
-nnoremap <leader>ff <cmd>Files<cr>
-nnoremap <leader>fg <cmd><cr>
-nnoremap <leader><space>f <cmd>:CocCommand explorer<CR>
-nnoremap <Leader>rp :w<Bar>execute 'silent !tmux send-keys -t 2 "python %" Enter'<CR>>
-nnoremap <Leader>]r :w<Bar>execute 'silent !tmux send-keys -t right "python %" Enter'<CR>
-nnoremap <Leader>r] :w<CR> :CocCommand python.execInTerminal<CR>
+" ------------------------
+" ##### KEYBOARD MAP #####
+" ------------------------
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>GFiles<cr>
+nnoremap <Leader>r] :w<CR>:CocCommand python.execInTerminal<CR>
+nnoremap <Leader>rp :w<Bar>execute 'silent !tmux send-keys -t dev:debug "python %" Enter'<CR>
+
 
 " _indentline_
-let g:indentLine_color_gui = '#444144'
-let g:indentLine_char = '+'
+let g:indentLine_enabled = 1
+let g:indentLine_color_gui = '#424554'
+let g:indentLine_char = ''
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 1
-let g:indentLine_enabled = 1
-let g:indentLine_leadingSpaceChar = '-'
-let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceEnabled = 0
+let g:indentLine_leadingSpaceChar = '∙'
+let g:indentLine_maxLines = 1
 
 " _simpyfold_
 let g:SimpylFold_docstring_preview = 0
@@ -179,4 +187,5 @@ autocmd FileType *
 " _auto_pairs_
 au FileType php let b:AutoPairs = AutoPairsDefine({'<?' : '?>', '<?php': '?>'})
 command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline']}, <bang>0)
+    \ call fzf#vim#files(<q-args>, {'options': 
+    \ ['--layout=reverse', '--info=inline']}, <bang>0)

@@ -15,17 +15,18 @@ Xft*hinting:                1
 Xft*hintstyle:              hintfull
 Xft*autohint:               1
 Xft*lcdfilter:              lcddefault
+
 !--- GLOBAL ---
 URxvt*perl-lib:             /home/g0d/.urxvt/ext
 URxvt*perl-ext:             default,background,keysym-list,selection-autotransform,bell-command,block-graphics-to-ascii,matcher,clipboard-osc,digital-clock,readline,font-size,selection,eval
 URxvt*xftAntialias:         true
 URxvt*letterSpace:          1
-URxvt*font:                 xft:Consolas:style=Regular:pixelsize=17:antialias=true:hinting=true
-URxvt*boldFont:             xft:Consolas:style=Regular:pixelsize=17:antialias=true:hinting=true
-URxvt*italicFont:           xft:Consolas:style=Regular:pixelsize=17:antialias=true:hinting=true
-URxvt*bolditalicFont:       xft:Consolas:style=Regular:pixelsize=17:antialias=true:hinting=true
+URxvt*font:                 xft:Inconsolata\ Nerd\ Font\ Mono:style=Light:pixelsize=17:antialias=true:hinting=true,xft:Font\ Awesome:pixelsize=17
+URxvt*boldFont:             xft:Inconsolata\ Nerd\ Font\ Mono:style=Light:pixelsize=17:antialias=true:hinting=true,xft:Font\ Awesome:pixelsize=17
+URxvt*italicFont:           xft:Inconsolata\ Nerd\ Font\ Mono:style=Light:pixelsize=17:antialias=true:hinting=true,xft:Font\ Awesome:pixelsize=17
+URxvt*bolditalicFont:       xft:Inconsolata\ Nerd\ Font\ Mono:style=Light:pixelsize=17:antialias=true:hinting=true,xft:Font\ Awesome:pixelsize=17
 URxvt*skipBuiltinGlyphs:    false
-URxvt*termName:				xterm-256color
+URxvt*termName:				rxvt-unicode-256color
 URxvt*urgentOnBell:         false
 URxvt*visualBell:           false
 URxvt*loginShell:			true
