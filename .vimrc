@@ -160,7 +160,7 @@ nnoremap <Leader>rp :w<Bar>execute 'silent !tmux send-keys -t dev:debug "python 
 " _indentline_
 let g:indentLine_enabled = 1
 let g:indentLine_color_gui = '#424554'
-let g:indentLine_char = ''
+let g:indentLine_char = '↳'
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 1
 let g:indentLine_leadingSpaceEnabled = 0
